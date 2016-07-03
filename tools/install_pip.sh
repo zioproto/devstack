@@ -102,6 +102,7 @@ if [[ -n $PYPI_ALTERNATIVE_URL ]]; then
     configure_pypi_alternative_url
 fi
 
-pip_install -U setuptools
+set -x
+pip_install -U 'setuptools<24'
 
 get_versions
